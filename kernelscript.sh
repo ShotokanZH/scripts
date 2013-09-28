@@ -21,7 +21,8 @@ export CROSS_COMPILE=/Volumes/android/toolchains/arm-eabi-linaro-4.6.2/bin/arm-e
 
 make frost_defconfig
 
-make -j4
+# not everyone has 4CPUs
+make -j$(nproc)
 
 make modules
 
