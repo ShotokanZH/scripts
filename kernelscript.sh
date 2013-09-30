@@ -31,5 +31,5 @@ make -j$(nproc)
 
 make modules
 
-find . -name "*.ko" -exec cp {} ../Volumes/android/output \;
-cp arch/arm/boot/zImage ../Volumes/android/output/zImage
+find . -name "*.ko" -exec cp {} /Volumes/android/output \;
+cp arch/arm/boot/zImage /Volumes/android/output/zImage
