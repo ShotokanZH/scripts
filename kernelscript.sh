@@ -21,7 +21,9 @@ export CROSS_COMPILE=/Volumes/android/toolchains/arm-eabi-linaro-4.6.2/bin/arm-e
 
 make frost_defconfig
 
-make -j4
+# make spawns N jobs, where N is the number of CPU cores (or threads if different)
+
+make -j$(nproc)
 
 make modules
 
