@@ -17,6 +17,10 @@ export ARCH=arm
 
 export CROSS_COMPILE=/Volumes/android/toolchains/arm-eabi-linaro-4.6.2/bin/arm-eabi-
 
+# Clean the build area
+
+make mrproper
+
 # now to start it all off
 
 make frost_defconfig
