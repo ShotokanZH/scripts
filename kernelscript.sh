@@ -14,6 +14,8 @@ mkdir /Volumes/android/output/modules
 export ARCH=arm
 
 # Then setup the toolchain
+# !!WARNING!!
+# '~' symbol is not resolved into a path, but interpreted as '\~'
 
 export CROSS_COMPILE=/Volumes/android/toolchains/arm-eabi-linaro-4.6.2/bin/arm-eabi-
 
@@ -31,5 +33,5 @@ make -j$(nproc)
 
 make modules
 
-find . -name "*.ko" -exec cp {} /Volumes/android/output \;
+find . -name "*.ko" -exec cp {} /Volumes/android/output/modules \;
 cp arch/arm/boot/zImage /Volumes/android/output/zImage
